@@ -20,7 +20,7 @@ final class SoapResponseFactory
         }
         $result = $response->ParcelDocuments->ParcelDocument;
 
-        return new Response($result->Identifier, $result->Content, $output['Success']);
+        return new Response($response->Shipments->SequenceNumber, $result->Content, $output['Success']);
     }
 
     private static function validateFields($response)
@@ -33,7 +33,7 @@ final class SoapResponseFactory
         if (!isset($result->Content)) {
             return false;
         }
-        if (!isset($result->Identifier)) {
+        if (!isset($response->Shipments->SequenceNumber)) {
             return false;
         }
 

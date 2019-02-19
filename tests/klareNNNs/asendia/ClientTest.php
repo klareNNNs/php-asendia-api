@@ -67,7 +67,7 @@ class ClientTest extends TestCase
         $address = new Address($address1, $addressType, $cellPhone, $city, $contact, $email, $ISOCountry, $name, $zipCode);
 
         $originSub = 'ES';
-        $CRMID = 'ES14030004'; /* Your unique identifier within Asendia system called CRM ID. */
+        $CRMID = 'ES14035564'; /* Your unique identifier within Asendia system called CRM ID. */
         $product = 'FTG';
         $service = 'PR';
         $additionalService = '';
