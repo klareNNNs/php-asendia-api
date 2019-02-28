@@ -8,6 +8,7 @@ use PHPUnit\Framework\TestCase;
 class AuthenticationClientTest extends TestCase
 {
     const TEST_SOAP_CLIENT = 'https://uat.centiro.com/Universe.Services/TMSBasic/Wcf/c1/i1/TMSBasic/Authenticate.svc?wsdl';
+    const TEST_SOAP_WS_CLIENT = 'https://uat.centiro.com/Universe.Services/TMSBasic/Wcf/c1/i1/TMSBasic/Authenticate.svc/xml';
     private $client;
     private $user;
     private $password;
@@ -22,7 +23,8 @@ class AuthenticationClientTest extends TestCase
         $this->client = new AuthenticationClient(
             $this->user,
             $this->password,
-            self::TEST_SOAP_CLIENT
+            self::TEST_SOAP_CLIENT,
+            self::TEST_SOAP_WS_CLIENT
         );
 
     }

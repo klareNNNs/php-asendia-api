@@ -14,12 +14,16 @@ class AuthenticationClient
     private $password;
     private $client;
 
-    public function __construct(string $user, string $password, string $wsdl)
+    public function __construct(string $user, string $password, string $wsdl, string $ws)
     {
         $this->user = $user;
         $this->password = $password;
 
-        $this->client = new SoapClient($wsdl);
+        $this->client = new SoapClient($wsdl, array(
+            'location' => $ws,
+            'uri' => $ws,
+            'trace' => 1
+        ));
     }
 
 
