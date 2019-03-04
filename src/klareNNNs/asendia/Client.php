@@ -67,6 +67,5 @@ class Client
             dump($ex->getMessage());
 
         }
-
     }
 }

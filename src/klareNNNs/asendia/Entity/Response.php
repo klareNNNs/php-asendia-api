@@ -31,7 +31,4 @@ final class Response
     {
         return $this->success;
     }
-
-
-
 }

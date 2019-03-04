@@ -39,5 +39,4 @@ final class SoapResponseFactory
 
         return true;
     }
-
 }

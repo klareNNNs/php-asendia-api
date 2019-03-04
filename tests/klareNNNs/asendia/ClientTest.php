@@ -111,5 +111,4 @@ class ClientTest extends TestCase
 
         $this->assertEquals(true, $response->getSuccess());
     }
-
 }
