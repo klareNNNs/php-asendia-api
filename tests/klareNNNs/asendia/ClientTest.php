@@ -19,6 +19,9 @@ class ClientTest extends TestCase
 {
     const WSDL_LOCATION = 'https://uat.centiro.com/Universe.Services/TMSBasic/Wcf/c1/i1/TMSBasic/TMSBasic.svc?wsdl';
     const WS_LOCATION = 'https://uat.centiro.com/Universe.Services/TMSBasic/Wcf/c1/i1/TMSBasic/TMSBasic.svc/xml';
+
+    const AUTH_SOAP_CLIENT = 'https://uat.centiro.com/Universe.Services/TMSBasic/Wcf/c1/i1/TMSBasic/Authenticate.svc?wsdl';
+    const AUTH_SOAP_WS_CLIENT = 'https://uat.centiro.com/Universe.Services/TMSBasic/Wcf/c1/i1/TMSBasic/Authenticate.svc/xml';
     /**
      * @var Client
      */
@@ -40,7 +43,7 @@ class ClientTest extends TestCase
         $this->user = "usertest"; /* USER AND PASSWORD GIVEN TO YOU BY ASENDIA*/
         $this->password = "passwordtest";
 
-        $this->authClient = new AuthenticationClient($this->user, $this->password, 'https://uat.centiro.com/Universe.Services/TMSBasic/Wcf/c1/i1/TMSBasic/Authenticate.svc?wsdl');
+        $this->authClient = new AuthenticationClient($this->user, $this->password, self::AUTH_SOAP_CLIENT, self::AUTH_SOAP_WS_CLIENT);
 
     }
 
@@ -69,21 +72,23 @@ class ClientTest extends TestCase
         $originSub = 'ES';
         $CRMID = 'ES14035564'; /* Your unique identifier within Asendia system called CRM ID. */
         $product = 'FTG';
-        $service = 'PR';
+        $service = 'PLD';
         $additionalService = '';
-        $format = 'P';
+        $format = 'N';
 
         $attributes = new Attributes($originSub, $CRMID, $product, $service, $additionalService, $format);
 
         $currency = 'EUR';
-        $modeOfTransport = 'MASTERSHP';
+        $modeOfTransport = 'ACSS';
         $orderNumber = 1;
 
         $countryOfOrigin = 'ES';
         $description1 = 'tshirt';
         $harmonizationCode = 610910000080;
+        $quantityShipped = 1;
+        $unitPrice = 18;
 
-        $orderLine = new OrderLine($countryOfOrigin, $description1, $harmonizationCode);
+        $orderLine = new OrderLine($countryOfOrigin, $description1, $harmonizationCode, $quantityShipped, $unitPrice);
         $orderLines[] = $orderLine;
         $orderLines[] = $orderLine;
         $orderLines[] = $orderLine;

@@ -9,12 +9,16 @@ final class OrderLine
     private $countryOfOrigin;
     private $description1;
     private $harmonizationCode;
+    private $quantityShipped;
+    private $unitPrice;
 
-    public function __construct(string $countryOfOrigin, string $description1, int $harmonizationCode)
+    public function __construct(string $countryOfOrigin, string $description1, int $harmonizationCode, int $quantityShipped, float $unitPrice)
     {
         $this->countryOfOrigin = $countryOfOrigin;
         $this->description1 = $description1;
         $this->harmonizationCode = $harmonizationCode;
+        $this->quantityShipped = $quantityShipped;
+        $this->unitPrice = $unitPrice;
     }
 
     public function getCountryOfOrigin(): string
@@ -32,6 +36,13 @@ final class OrderLine
         return $this->harmonizationCode;
     }
 
+    public function getQuantityShipped(): int
+    {
+        return $this->quantityShipped;
+    }
 
-
+    public function getUnitPrice(): float
+    {
+        return $this->unitPrice;
+    }
 }

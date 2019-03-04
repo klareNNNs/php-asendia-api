@@ -66,6 +66,8 @@ class SoapRequestFactory
             'HarmonizationCode' => $orderLines[0]->getHarmonizationCode(),
             'OrderLineNumber' => '1',
             'OrderNumber' => $request->getOrderNumber(),
+            'QuantityShipped' => $orderLines[0]->getQuantityShipped(),
+            'UnitPrice' => $orderLines[0]->getUnitPrice(),
             'Weight' => $request->getWeight()
         );
 
