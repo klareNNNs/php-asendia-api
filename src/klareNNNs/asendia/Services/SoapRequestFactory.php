@@ -59,7 +59,7 @@ class SoapRequestFactory
 
         $orderLines = $request->getParcels()->getOrderLines();
         $OrderLine = array(
-            'CountryOfOrigin' => $orderLines[0]->getDescription1(),
+            'CountryOfOrigin' => $orderLines[0]->getCountryOfOrigin(),
             'Currency' => $request->getCurrency(),
             'Description1' => $orderLines[0]->getDescription1(),
             //'Description2' => '',
