@@ -5,7 +5,7 @@
   "minimum-stability": "dev",
   "keywords": [
     "Api",
-    "Client",
+    "Client"
   ],
   "homepage": "https://github.com/klarennns/php-asendia-api",
   "license": "MIT",
