@@ -47,7 +47,7 @@ class SoapRequestFactory
             new SoapVar(array('ns2:Code' => 'CRMID', 'ns2:Value' => $request->getAttributes()->getCRMID()), SOAP_ENC_OBJECT, '', 'Attribute', ''),
             new SoapVar(array('ns2:Code' => 'Product', 'ns2:Value' => $request->getAttributes()->getProduct()), SOAP_ENC_OBJECT, '', 'Attribute', ''),
             new SoapVar(array('ns2:Code' => 'Service', 'ns2:Value' => $request->getAttributes()->getService()), SOAP_ENC_OBJECT, '', 'Attribute', ''),
-            new SoapVar(array('ns2:Code' => 'AdditionalService', 'ns2:Value' => ''), SOAP_ENC_OBJECT, '', 'Attribute', ''),
+            new SoapVar(array('ns2:Code' => 'AdditionalService', 'ns2:Value' => $request->getAttributes()->getAdditionalService()), SOAP_ENC_OBJECT, '', 'Attribute', ''),
             new SoapVar(array('ns2:Code' => 'Format', 'ns2:Value' => $request->getAttributes()->getFormat()), SOAP_ENC_OBJECT, '', 'Attribute', ''),
             new SoapVar(array('ns2:Code' => 'AdditionalData1', 'ns2:Value' => ''), SOAP_ENC_OBJECT, '', 'Attribute', ''),
             new SoapVar(array('ns2:Code' => 'AdditionalData2', 'ns2:Value' => ''), SOAP_ENC_OBJECT, '', 'Attribute', ''),
