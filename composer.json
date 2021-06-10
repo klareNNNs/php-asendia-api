@@ -1,5 +1,5 @@
 {
-  "name": "klarennns/php-asendia-api",
+  "name": "latostadora/php-asendia-api",
   "type": "project",
   "description": "Api Client to connect to asendia Services",
   "minimum-stability": "dev",
