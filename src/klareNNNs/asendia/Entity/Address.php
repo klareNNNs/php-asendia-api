@@ -16,10 +16,12 @@ final class Address
     private $ISOCountry;
     private $name;
     private $zipCode;
+    private $address2;
 
-    public function __construct($address1, $addressType, $cellPhone, $city, $contact, $email, $ISOCountry, $name, $zipCode)
+    public function __construct($address1, $addressType, $cellPhone, $city, $contact, $email, $ISOCountry, $name, $zipCode, $address2 = '')
     {
         $this->address1 = $address1;
+        $this->address2 = $address2;
         $this->addressType = $addressType;
         $this->cellPhone = $cellPhone;
         $this->city = $city;
@@ -73,6 +75,11 @@ final class Address
     public function getZipCode()
     {
         return $this->zipCode;
+    }
+
+    public function getAddress2()
+    {
+        return $this->address2;
     }
 
 

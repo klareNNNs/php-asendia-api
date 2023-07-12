@@ -16,7 +16,7 @@ class SoapRequestFactory
         $Address = array (
 
             'Address1' => $request->getAddress()->getAddress1(),
-            //'Address2' => '',
+            'Address2' => $request->getAddress()->getAddress2(),
             //'Address3' => '',
             'AddressType' => $request->getAddress()->getAddressType(),
             'CellPhone' => $request->getAddress()->getCellPhone(),
